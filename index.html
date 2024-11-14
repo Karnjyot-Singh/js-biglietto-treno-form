@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Prezzo Biglietto</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  
-  <script src="./js/script.js"></script>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Sezione informazioni -->
+            <h2 class="text-center">Calcolatore Prezzo Biglietto</h2>
+            <form id="ticketForm">
+                <div class="form-group">
+                    <label for="firstNameInput">Nome:</label>
+                    <input type="text" class="form-control" id="firstNameInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastNameInput">Cognome:</label>
+                    <input type="text" class="form-control" id="lastNameInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="kmInput">Numero di chilometri:</label>
+                    <input type="number" class="form-control" id="kmInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="ageInput">Età del passeggero:</label>
+                    <input type="number" class="form-control" id="ageInput" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Calcola Prezzo</button>
+            </form>
+            <!-- /Sezione informazioni -->
+            <!-- Sezione biglietto -->
+            <div id="ticketInfo" class="result-box" style="display: none;">
+                <div class="card shadow-lg p-4 mt-4">
+                    <h4 class="card-title text-center mb-4">Biglietto</h4>
+                    <div class="d-flex justify-content-between">
+                        <div class="ticket-detail">
+                            <p><strong>Nome:</strong> <span id="ticketName"></span></p>
+                            <p><strong>Cognome:</strong> <span id="ticketSurname"></span></p>
+                            <p><strong>Chilometri:</strong> <span id="ticketKm"></span></p>
+                            <p><strong>Età:</strong> <span id="ticketAge"></span></p>
+                            <p><strong>Prezzo:</strong> <span id="ticketPrice"></span> €</p>
+                        </div>
+                        <div class="ticket-extra">
+                            <p><strong>Carrozza:</strong> <span id="ticketCarrozza"></span></p>
+                            <p><strong>Codice CP:</strong> <span id="ticketCp"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Sezione biglietto -->
+        </div>
+    </div>
+</div>
+<script src="./script.js"></script>
 </body>
-</html
+</html>
